@@ -1,0 +1,51 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Navigation.master.cs" Inherits="OnlineEmployeeProfile.Navigation" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>OnlineEmployeeProfile</title>
+    <link href="StyleSheet1.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            text-align: center;
+        }
+        .auto-style2 {
+            height: 81px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="auto-style1">
+        <header id="header">  
+        <h1 class="auto-style2">
+            <asp:Image ID="Logo" runat="server" Height="86px" ImageAlign="Left" ImageUrl="~/Capture.PNG" Width="133px" />
+            Online Employee Profile</h1>  
+        </header> 
+        <nav id="nav">  
+            <ul>  
+                <li><a href="EmployeeInfo.aspx">Employee Details</a></li>     
+                <li><a href="JobDetails.aspx">Job Details</a></li>  
+                <li><a href="BankDetails.aspx">Bank Details</a></li>  
+                <li><a href="Leave.aspx">Leave</a></li> 
+                <li><a href="Payslip.aspx">Payslip</a></li>
+                <li><a href="Roster.aspx">Roster</a></li>
+                <li><a href="EmpLogin.aspx">Logout</a></li>
+            </ul>  
+        </nav> 
+        <br />
+        <br />
+        <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Italic="True" Font-Size="Large" Text="Hi John Smith. Welcome to your online employee profile"></asp:Label>
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                
+            </asp:ContentPlaceHolder>
+        </div>
+        </div>
+    </form>
+</body>
+</html>
